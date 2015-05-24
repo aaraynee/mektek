@@ -1,0 +1,90 @@
+.loop-wrapper.news.scroll-x,
+.portfolios.scroll-x,
+.woocommerce-scrollable.scroll-x {
+	> .bx-wrapper {
+		> div > ul {
+			margin: 0;
+		}
+
+		> .bx-controls {
+			display: none;
+
+			html.touch & {
+				display: block;
+			}
+
+			> .bx-controls-direction a:not(.disabled) {
+				display: block;
+				margin-top: -22px;
+				width: 24px;
+				height: 24px;
+				padding: 10px;
+				border-radius: 0px;
+				top: 50%;
+				background: @accent-color-1;
+				color: @accent-color-8;
+				opacity: 1;
+				transition: all .3s;
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&:after {
+					font: 25px/1 icomoon;
+				}
+
+				&.bx-prev {
+					right: auto;
+					left: -20px;
+
+					&:after {
+						font-family: theme;
+						content: icon(theme-arrow-left22);
+					}
+				}
+
+				&.bx-next {
+					right: -20px;
+
+					&:after {
+						font-family: theme;
+						content: icon(theme-arrow-right22);
+					}
+				}
+			}
+		}
+
+		&:hover {
+			> .bx-controls {
+				display: block;
+			}
+		}
+
+		.portfolio-item-wrapper .thumbnail-overlay {
+			left: 0;
+			right: 0;
+		}
+	}
+}
+
+.loop-wrapper.news.scroll-x {
+	padding-top: 0 !important;
+}
+
+.woocommerce-scrollable.scroll-x {
+	ul.products {
+		padding-top: 0;
+		border-top: 0;
+
+		li.product {
+			> div {
+				// padding: 0 20px;
+			}
+
+			html.csstransforms & span.onsale {
+				margin-right: 5px;
+			}
+		}
+	}
+}
